@@ -1,0 +1,15 @@
+require 'spec_helper'
+require 'debugger'
+require './app/controllers/movies_controller.rb'
+
+describe Movie do
+  before(:each) do
+    @movie = Movie.new(:title => "The Dark Knight Returns", :rating => "NC-17", :director => "Christopher Nolan", :id => "5")
+  end
+  it "should create a new movie" do
+  end
+  it "should destroy a movie" do
+    delete :destroy, {:id => "5"}
+    Movie.find_by_title("The Dark Knight Returns").should_be_nil
+  end
+end

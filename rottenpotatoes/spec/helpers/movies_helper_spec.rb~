@@ -1,0 +1,8 @@
+require 'spec_helper'
+include MoviesHelper
+
+describe "Movies helper" do
+  it "should test oddness correctly" do
+    oddness(3).should == "odd"
+  end
+end

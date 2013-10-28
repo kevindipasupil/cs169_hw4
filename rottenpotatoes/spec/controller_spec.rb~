@@ -1,0 +1,16 @@
+require 'spec_helper'
+require 'debugger'
+require './app/controllers/movies_controller.rb'
+
+describe "Movie" do
+  before(:each) do
+    @movie = Movie.new(:title => "The Dark Knight Returns", :rating => "NC-17", :director => "Christopher Nolan")
+  end
+  it "should create a movie" do
+    
+  end
+  it "should render the index correctly" do
+    get :index
+    response.should render_template('movies/index')
+  end
+end
